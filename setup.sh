@@ -12,4 +12,6 @@ helm upgrade --install argocd argo/argo-cd \
 
 eval $(minikube docker-env);
 
-docker build -t app:latest ./project
+docker build -t app:latest ./project;
+
+kubectl apply -f argo-app.yaml;
