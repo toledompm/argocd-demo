@@ -2,6 +2,14 @@
 
 minikube start;
 
-make configure-repo;
+helm repo add argo https://argoproj.github.io/argo-helm
+helm repo update
 
-make deploy-argocd;
+helm upgrade --install argocd argo/argo-cd \
+  --namespace argocd \
+  --create-namespace \
+  -f ./argocd/values.yaml
+
+eval $(minikube docker-env);
+
+docker build -t app:latest ./project
