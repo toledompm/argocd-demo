@@ -20,7 +20,7 @@ spec:
     repoURL: https://github.com/toledompm/argocd-demo
     targetRevision: HEAD
     helm:
-      releaseName: project-app
+      releaseName: project-app-2
       valueFiles:
         - $values/custom-values.yaml
   - repoURL: https://github.com/toledompm/argocd-demo
