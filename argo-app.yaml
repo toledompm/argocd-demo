@@ -22,7 +22,7 @@ spec:
     helm:
       releaseName: project-app-2
       valueFiles:
-        - $values/custom-values.yaml
+        - $values/custom-values-2.yaml
   - repoURL: https://github.com/toledompm/argocd-demo
     targetRevision: HEAD
     ref: values
